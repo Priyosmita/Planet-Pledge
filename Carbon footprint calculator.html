@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Carbon Footprint Calculator</title> -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: rgba(245, 245, 245, 0);
+            /* Semi-opaque background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            /* Add padding to avoid content being cut off on small screens */
+            box-sizing: border-box;
+            /* Ensure padding is included in element's total width and height */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.4);
+            /* Semi-opaque background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            /* Full width for better responsiveness */
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .modes {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow buttons to wrap to new line */
+            justify-content: space-around;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .mode-btn {
+            background-color: #1DB954;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 40px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            position: relative;
+            flex: 1;
+            /* Allow buttons to grow and shrink */
+            min-width: 100px;
+            /* Minimum width for buttons */
+            max-width: 200px;
+            /* Maximum width for buttons */
+            font-size: x-small;
+        }
+
+        .mode-btn img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+
+        .mode-btn:hover,
+        .mode-btn.active {
+            background-color: #EA6020;
+        }
+
+        .mode-btn:hover .tooltip,
+        .mode-btn.active .tooltip {
+            display: block;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 12px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .mode {
+            display: none;
+        }
+
+        .mode.active {
+            display: block;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #EA6020;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1DB954;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #result-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+
+        #footprint-value {
+            font-size: 40px;
+            color: #EA6020;
+            /* Orange color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <!-- <h1>Carbon Footprint Calculator</h1> -->
+        <div class="modes">
+            <button class="mode-btn" id="home-btn" data-tooltip="Home" onclick="showMode('home')">
+                <img src="https://img.icons8.com/?size=100&id=i6fZC6wuprSu&format=png&color=000000" alt="Home">
+                Home
+            </button>
+            <button class="mode-btn" id="travel-btn" data-tooltip="Travel" onclick="showMode('travel')">
+                <img src="https://img.icons8.com/?size=100&id=Atb5mR0Y5hAu&format=png&color=000000" alt="Travel">
+                Travel
+            </button>
+            <button class="mode-btn" id="diet-btn" data-tooltip="Diet" onclick="showMode('diet')">
+                <img src="https://img.icons8.com/?size=100&id=97450&format=png&color=000000" alt="Diet">
+                Diet
+            </button>
+            <button class="mode-btn" id="waste-btn" data-tooltip="Waste" onclick="showMode('waste')">
+                <img src="https://img.icons8.com/?size=100&id=G01ACMKXfdpJ&format=png&color=000000" alt="Waste">
+                Waste
+            </button>
+        </div>
+
+        <div id="home" class="mode">
+            <!-- <h2>Home</h2> -->
+            <input type="number" id="electricity" name="electricity" placeholder="Electricity Usage (kWh)">
+            <input type="number" id="gas" name="gas" placeholder="Gas Usage (therms)">
+            <input type="number" id="water" name="water" placeholder="Water Usage (gallons)">
+            <input type="number" id="home-waste" name="waste" placeholder="Waste Generated (lbs)">
+        </div>
+
+        <div id="travel" class="mode">
+            <!-- <h2>Travel</h2> -->
+            <input type="number" id="car-miles" name="car-miles" placeholder="Car Miles Driven">
+            <input type="number" id="flight-hours" name="flight-hours" placeholder="Flight Hours">
+            <input type="number" id="public-transit" name="public-transit" placeholder="Public Transit (miles)">
+            <input type="number" id="bike" name="bike" placeholder="Bike (miles)">
+        </div>
+
+        <div id="diet" class="mode">
+            <!-- <h2>Diet</h2> -->
+            <input type="number" id="meat" name="meat" placeholder="Meat Consumption (lbs)">
+            <input type="number" id="dairy" name="dairy" placeholder="Dairy Consumption (lbs)">
+            <input type="number" id="vegetables" name="vegetables" placeholder="Vegetables Consumption (lbs)">
+            <input type="number" id="grains" name="grains" placeholder="Grains Consumption (lbs)">
+        </div>
+
+        <div id="waste" class="mode">
+            <!-- <h2>Waste</h2> -->
+            <input type="number" id="plastic" name="plastic" placeholder="Plastic Waste (lbs)">
+            <input type="number" id="paper" name="paper" placeholder="Paper Waste (lbs)">
+            <input type="number" id="glass" name="glass" placeholder="Glass Waste (lbs)">
+            <input type="number" id="metal" name="metal" placeholder="Metal Waste (lbs)">
+        </div>
+
+        <button onclick="calculateFootprint()">Calculate Footprint</button>
+        <div id="result-container">
+            <div id="result">
+                <h2>Your Carbon Footprint:</h2>
+                <p id="footprint-value">0 kg CO2</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            showMode('home');
+        });
+
+        function showMode(mode) {
+            const modes = document.querySelectorAll('.mode');
+            modes.forEach(m => m.classList.remove('active'));
+            document.getElementById(mode).classList.add('active');
+
+            const modeButtons = document.querySelectorAll('.mode-btn');
+            modeButtons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`${mode}-btn`).classList.add('active');
+        }
+
+        function calculateFootprint() {
+            let footprint = 0;
+
+            if (document.getElementById('home').classList.contains('active')) {
+                const electricity = parseFloat(document.getElementById('electricity').value) || 0;
+                const gas = parseFloat(document.getElementById('gas').value) || 0;
+                const water = parseFloat(document.getElementById('water').value) || 0;
+                const waste = parseFloat(document.getElementById('home-waste').value) || 0;
+                footprint = electricity * 0.92 + gas * 5.3 + water * 0.001 + waste * 2.5;
+            }
+
+            if (document.getElementById('travel').classList.contains('active')) {
+                const carMiles = parseFloat(document.getElementById('car-miles').value) || 0;
+                const flightHours = parseFloat(document.getElementById('flight-hours').value) || 0;
+                const publicTransit = parseFloat(document.getElementById('public-transit').value) || 0;
+                const bike = parseFloat(document.getElementById('bike').value) || 0;
+                footprint = carMiles * 0.404 + flightHours * 250 + publicTransit * 0.17 - bike * 0.005;
+            }
+
+            if (document.getElementById('diet').classList.contains('active')) {
+                const meat = parseFloat(document.getElementById('meat').value) || 0;
+                const dairy = parseFloat(document.getElementById('dairy').value) || 0;
+                const vegetables = parseFloat(document.getElementById('vegetables').value) || 0;
+                const grains = parseFloat(document.getElementById('grains').value) || 0;
+                footprint = meat * 27 + dairy * 13.6 + vegetables * 2 + grains * 2.5;
+            }
+
+            if (document.getElementById('waste').classList.contains('active')) {
+                const plastic = parseFloat(document.getElementById('plastic').value) || 0;
+                const paper = parseFloat(document.getElementById('paper').value) || 0;
+                const glass = parseFloat(document.getElementById('glass').value) || 0;
+                const metal = parseFloat(document.getElementById('metal').value) || 0;
+                footprint = plastic * 6 + paper * 4 + glass * 1.5 + metal * 1.3;
+            }
+
+            document.getElementById('footprint-value').textContent = `${footprint.toFixed(2)} kg CO2`;
+        }
+    </script>
+</body>
+
+</html>
