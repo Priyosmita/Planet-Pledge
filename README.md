@@ -5,39 +5,58 @@
 ## Introduction
 **Welcome to PlanetPledge**, your ultimate climate change awareness hub! Our mission is to engage, educate, and inspire action towards a sustainable future. Dive into a world of interactive features designed to promote eco-friendly practices and build a passionate community dedicated to protecting our planet.
 
+![Screenshot (56)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/08a73a75-a399-46fe-b838-b0364bfd46d5)
+
 ## Features
 ### 🔍 **Carbon Footprint Calculator**
-Calculate your carbon footprint with our easy-to-use tool built using HTML, CSS, and JavaScript.
+### Calculate your carbon footprint with our easy-to-use tool built using HTML, CSS, and JavaScript.
+
+![Screenshot (57)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/7ed00657-76f9-4d62-82cf-eeece8450e38)
 
 ### 📚 **Blogs**
-Explore our diverse range of blogs on various climate change topics and stay informed.
+### Explore our diverse range of blogs on various climate change topics and stay informed.
+
+![Screenshot (58)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/f982ca53-9cfb-4546-b485-9ed3994501fc)
 
 ### 🎟️ **Events Page**
-Join climate change-themed events via RSVP or ticket purchase and be a part of the movement.
+### Join climate change-themed events via RSVP or ticket purchase and be a part of the movement.
+
+![Screenshot (59)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/f7603764-a50e-4ddd-be41-235df2161ae3)
 
 ### 💬 **Forum**
-Share your views and stories on climate change and connect with like-minded individuals.
+### Share your views and stories on climate change and connect with like-minded individuals.
+
+![Screenshot (60)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/7de83d48-07cb-4011-90f6-fab2abd369bc)
 
 ### 🎁 **Loyalty Program**
-Earn pledge points by registering, participating in events, and more. Use these points for exciting rewards!
+### Earn pledge points by registering, participating in events, and more. Use these points for exciting rewards!
+
+![Screenshot (64)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/738a49b7-9f10-4db6-aa14-b5978b60e30b)
 
 ### 📸 **Gallery**
-Discover stunning climate change-related photos that inspire and educate.
+### Discover stunning climate change-related photos that inspire and educate.
+
+![Screenshot (63)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/4ee485ae-1fd5-4bf2-8468-0db1dfffeaaf)
 
 ### 🛒 **Store**
-Shop sustainable and eco-friendly products. Use your pledge points to get up to 100% discounts!
+### Shop sustainable and eco-friendly products. Use your pledge points to get up to 100% discounts!
+
+![Screenshot (61)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/fb427192-a7af-4b7f-af96-7cec405e7694)
 
 ### 🤝 **Partners Page**
-NGOs and non-profit organizations can register to collaborate and promote sustainability.
+### NGOs and non-profit organizations can register to collaborate and promote sustainability.
+
+![Screenshot (62)](https://github.com/Priyosmita/Wix-Creators-Of-Tomorrow-Hackathon-2024/assets/91245104/60b37e9d-7ca2-47ff-8fc0-e1b171da03b8)
+
 
 ### 📰 **Newsletter**
-Stay updated with the latest news and updates delivered straight to your inbox.
+### Stay updated with the latest news and updates delivered straight to your inbox.
 
 ### 📞 **Contact Us Page**
-Have questions or feedback? Reach out to us anytime!
+### Have questions or feedback? Reach out to us anytime!
 
 ### 🦋 **Interactive 3D Elements**
-Enjoy dynamic visuals like a moving butterfly and a bee that follows your cursor, enhancing your user experience.
+### Enjoy dynamic visuals like a moving butterfly and a bee that follows your cursor, enhancing your user experience.
 
 ## Use Cases
 ### 🌱 **Individuals**
