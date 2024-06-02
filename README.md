@@ -1,6 +1,6 @@
 # 🌍 PlanetPledge
 
-[**Visit Our Project**](https://daspriyosmita2003.wixstudio.io/planetpledge)
+[**Visit PlanetPledge**](https://daspriyosmita2003.wixstudio.io/planetpledge)
 
 ## Introduction
 **Welcome to PlanetPledge**, your ultimate climate change awareness hub! Our mission is to engage, educate, and inspire action towards a sustainable future. Dive into a world of interactive features designed to promote eco-friendly practices and build a passionate community dedicated to protecting our planet.
@@ -96,11 +96,11 @@
 - **Community Programs**: Participate in local events and programs aimed at improving community sustainability.
 
 ## Tech Stack
-- **HTML**
-- **CSS**
-- **JavaScript**
 - **Spline** (for 3D elements)
 - **Wix Studio**
+- ![HTML](https://img.shields.io/badge/HTML-Front%20End-E34F26?style=flat&logo=html5)
+- ![CSS](https://img.shields.io/badge/CSS-Front%20End-1572B6?style=flat&logo=css3)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-Front%20End-F7DF1E?style=flat&logo=javascript)
 
 ## Differentiators
 ### 🚀 **Comprehensive Features**
