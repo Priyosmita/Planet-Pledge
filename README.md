@@ -96,8 +96,8 @@
 - **Community Programs**: Participate in local events and programs aimed at improving community sustainability.
 
 ## Tech Stack
-- **Spline** (for 3D elements)
-- **Wix Studio**
+- ![Spline](https://img.shields.io/badge/Spline-3d%20Elements-460856?style=flat&logo=spine)
+- ![Wix](https://img.shields.io/badge/Front%20End-0C6EFC?style=flat&logo=wix)
 - ![HTML](https://img.shields.io/badge/HTML-Front%20End-E34F26?style=flat&logo=html5)
 - ![CSS](https://img.shields.io/badge/CSS-Front%20End-1572B6?style=flat&logo=css3)
 - ![JavaScript](https://img.shields.io/badge/JavaScript-Front%20End-F7DF1E?style=flat&logo=javascript)
