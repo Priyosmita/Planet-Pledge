@@ -100,7 +100,7 @@
 - ![Wix](https://img.shields.io/badge/Front%20End-0C6EFC?style=flat&logo=wix)
 - ![HTML](https://img.shields.io/badge/HTML-Front%20End-E34F26?style=flat&logo=html5)
 - ![CSS](https://img.shields.io/badge/CSS-Front%20End-1572B6?style=flat&logo=css3)
-- ![JavaScript](https://img.shields.io/badge/JavaScript-Front%20End-F7DF1E?style=flat&logo=javascript)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-Back%20End-F7DF1E?style=flat&logo=javascript)
 
 ## Differentiators
 ### 🚀 **Comprehensive Features**
